@@ -209,11 +209,11 @@
                 </div>
                 
                 <div class="max-w-none text-black">
-                    <p class="text-xl leading-relaxed mb-6 font-black">
+                    <p class="text-xl leading-relaxed mb-6 text-slate-800 font-semibold">
                         Prezados investidores e empreendedores da República Popular da China,
                     </p>
                     
-                    <p class="leading-relaxed mb-6 font-bold">
+                    <p class="leading-relaxed mb-6 text-gray-700">
                         É com grande honra e entusiasmo que extendemos este convite oficial para que conheçam 
                         <strong class="text-boituva-blue underline decoration-boituva-yellow decoration-4">Boituva</strong>, uma cidade estratégica localizada no estado de São Paulo, 
                         coração econômico do Brasil. Posicionada a apenas 85 km da capital paulista, Boituva representa 
@@ -222,16 +222,16 @@
 
                     <div class="grid md:grid-cols-2 gap-6 my-8">
                         <div class="glass-card p-6 rounded-xl border-l-4 border-boituva-yellow bg-white/60 shadow-md">
-                            <h3 class="font-black text-xl mb-2 text-boituva-blue">Logística Estratégica</h3>
-                            <p class="text-base font-bold">Cruzamento das rodovias Castello Branco e Raposo Tavares, conectando o maior mercado consumidor da América do Sul.</p>
+                            <h3 class="font-bold text-xl mb-2 text-boituva-blue">Logística Estratégica</h3>
+                            <p class="text-base text-gray-700">Cruzamento das rodovias Castello Branco e Raposo Tavares, conectando o maior mercado consumidor da América do Sul.</p>
                         </div>
                         <div class="glass-card p-6 rounded-xl border-l-4 border-boituva-blue bg-white/60 shadow-md">
-                            <h3 class="font-black text-xl mb-2 text-boituva-blue">Clima Privilegiado</h3>
-                            <p class="text-base font-bold">Temperatura média anual de 24°C, ideal para operações industriais e qualidade de vida superior.</p>
+                            <h3 class="font-bold text-xl mb-2 text-boituva-blue">Clima Privilegiado</h3>
+                            <p class="text-base text-gray-700">Temperatura média anual de 24°C, ideal para operações industriais e qualidade de vida superior.</p>
                         </div>
                     </div>
 
-                    <p class="leading-relaxed mb-6 font-bold">
+                    <p class="leading-relaxed mb-6 text-gray-700">
                         O que torna este momento historicamente único é a confluência de três fatores extraordinários: 
                         a consolidação de Boituva como polo logístico do interior paulista (com R$ 14,8 bilhões em 
                         investimentos na região de Sorocaba entre 2022-2024) [^4^], o advento do parque tecnológico 
@@ -239,7 +239,7 @@
                         compromisso inabalável com energias renováveis e sustentabilidade.
                     </p>
 
-                    <p class="leading-relaxed mb-6 font-bold">
+                    <p class="leading-relaxed mb-6 text-gray-700">
                         A recente inauguração das obras do <strong>Reator Multipropósito Brasileiro (RMB)</strong> em 
                         fevereiro de 2025 posiciona nossa região como o novo hub de medicina nuclear da América Latina, 
                         garantindo autossuficiência na produção de radioisótopos essenciais para diagnósticos e terapias 
@@ -248,14 +248,14 @@
                     </p>
 
                     <div class="bg-boituva-blue/10 p-6 rounded-xl my-8 border-2 border-boituva-blue/20">
-                        <p class="italic text-xl text-center font-black">
+                        <p class="italic text-xl text-center text-boituva-blue font-bold">
                             "Boituva não é apenas um destino de investimento; é uma plataforma de entrada para o 
                             maior mercado da América do Sul, combinando infraestrutura de ponta, incentivos fiscais 
                             atrativos e um ecossistema de inovação em franca expansão."
                         </p>
                     </div>
 
-                    <p class="leading-relaxed mb-6 font-bold">
+                    <p class="leading-relaxed mb-6 text-gray-700">
                         Convidamos vocês a visitarem nossa cidade, a sentirem o potencial de nossa terra, e a 
                         descobrirem por que multinacionais como a Schmersal (Alemanha) já investiram R$ 18 milhões 
                         em expansões locais [^5^]. Estamos prontos para oferecer tratamento diferenciado, desburocratização 
@@ -503,10 +503,21 @@
 
             <div class="glass-card rounded-2xl p-8 scroll-reveal">
                 <h3 class="text-2xl font-bold mb-6 text-center">Matriz Energética Brasileira - Diferencial Competitivo</h3>
-                <div class="max-w-3xl mx-auto">
-                    <canvas id="energyChart" width="400" height="200"></canvas>
+                <div class="max-w-md mx-auto relative flex items-center justify-center">
+                    <canvas id="energyChart" width="400" height="400" class="relative z-0"></canvas>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+                        <img src="assets/logo.png" alt="Brasão de Boituva" class="w-32 h-32 object-contain opacity-95">
+                    </div>
                 </div>
-                <p class="text-center text-sm text-gray-400 mt-4">
+                <!-- Custom Legend -->
+                <div class="flex flex-wrap justify-center gap-4 mt-6 max-w-lg mx-auto">
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#2F3E91]"></span><span class="text-xs font-semibold text-gray-600">Hidrelétrica</span></div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#4A5BC4]"></span><span class="text-xs font-semibold text-gray-600">Eólica</span></div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#FCEA10]"></span><span class="text-xs font-semibold text-gray-600">Solar</span></div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#009A4D]"></span><span class="text-xs font-semibold text-gray-600">Biomassa</span></div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-[#64748b]"></span><span class="text-xs font-semibold text-gray-600">Fósseis</span></div>
+                </div>
+                <p class="text-center text-sm text-gray-400 mt-6 leading-tight italic">
                     O Brasil lidera na geração de energia limpa, com mais de 1/3 vindo de fontes renováveis como solar e eólica [^6^]
                 </p>
             </div>
@@ -749,24 +760,30 @@
                         '#009A4D',
                         '#64748b'
                     ],
-                    borderWidth: 0
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
                 }]
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: true,
+                layout: {
+                    padding: 10
+                },
                 plugins: {
                     legend: {
-                        position: 'bottom',
-                        labels: {
-                            color: '#475569',
-                            padding: 20,
-                            font: {
-                                size: 12
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true,
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.raw + '%';
                             }
                         }
                     }
                 },
-                cutout: '70%'
+                cutout: '65%'
             }
         });
 
